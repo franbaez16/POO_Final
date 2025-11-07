@@ -7,15 +7,15 @@ using namespace std;
 // ===== ARCHIVO =====
 class Archivo{
     private:
-    string info;
+    string nombre_archivo; //guardar el nombre del archivo 
 
     public:
     Archivo();
     Archivo(string);
 
-    void grabarInfo(string);
-    string getInfo();
-    void setInfo(string);
+    void grabarInfo(string texto); //texto en el archivo
+    string getNombreArchivo() const;
+    void setNombreArchivo(const string &);
 };
 
 // ===== PERSONA =====
@@ -164,4 +164,11 @@ class Banco{
 
     string getNombreBanco() const;
     void setNombreBanco(const string &);
+    void altaCliente(const Cliente &nuevo); //agregar nuevocliente al banco
+    void registrarTransaccion(int, float, int, int, int, int );
+    void mostrarCliente();
+    void mostrarClienteporDNI(int);
+    void mostrarTransacciones(int, int, int) const;
+    void guardarClientes()const;
+    
 };
